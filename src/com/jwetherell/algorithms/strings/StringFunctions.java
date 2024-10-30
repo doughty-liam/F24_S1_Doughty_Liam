@@ -14,6 +14,11 @@ public class StringFunctions {
 
     public static final String reverseWithStringConcat(String string) {
         String output = new String();
+
+        if(string == null || string.IsEmpty()) {
+            return ""
+        }
+
         for (int i = (string.length() - 1); i >= 0; i--) {
             output += (string.charAt(i));
         }
@@ -21,6 +26,11 @@ public class StringFunctions {
     }
 
     public static final String reverseWithStringBuilder(String string) {
+
+        if(string == null || string.IsEmpty()) {
+            return ""
+        }
+
         final StringBuilder builder = new StringBuilder();
         for (int i = (string.length() - 1); i >= 0; i--) {
             builder.append(string.charAt(i));
